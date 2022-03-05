@@ -1,1 +1,1 @@
-web: gunicorn kidtsravel.wsgi
+web: gunicorn kidtstravel.wsgi
