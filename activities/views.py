@@ -8,6 +8,9 @@ from .filters import ExperienceFilter
 class HomeView(View):
     template_name = 'index.html'
 
+    def get(self, request, *args, **kwargs):
+        return render(request, 'index.html')
+
 
 # The Experience Filter View
 def search(request):
