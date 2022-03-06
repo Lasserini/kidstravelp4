@@ -12,7 +12,8 @@
 body {
     font-family: Roboto, sans-serif;
     font-size: 16px;
-    color: #3a3a3a
+    color: #3a3a3a;
+    background-color: #205fbe;
 }
 
 h1, h2, h3, h4, h5 {
@@ -54,17 +55,17 @@ header h1 {
     text-align: center;
     color: #fafafa;
     background: #f0511c;
-    border: solid 1px;
+    border: solid 1.5px;
     border-color: #205fbe;
     padding: auto 5px;
-    transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
 }
 
 #header_profile_link:hover {
-    background-color:#064221;
-    border: solid 1px;
+    background-color:#078b2f;
+    border: solid 1.5px;
     border-color: black;
 }
 
@@ -112,7 +113,7 @@ footer {
     bottom: 0;
     width: 100%;
     height: 80px;
-    background-color: #205fbe;
+    background-color: #7e1881;
     color: #fafafa;
 }
 
@@ -149,16 +150,16 @@ footer ul {
     text-align: center;
     color: #fafafa;
     background: #f0511c;
-    border: solid 1px;
-    border-color: #205fbe;
-    transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
+    border: solid 1.5px;
+    border-color: #7e1881;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
 }
 
 .social_list_item i:hover {
-    background: #064221;
-    border: solid 1px;
+    background: #078b2f;
+    border: solid 1.5px;
     border-color: black;
 }
 
