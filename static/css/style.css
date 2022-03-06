@@ -1,0 +1,22 @@
+/* Import from Google Fonts. Roboto as the main font and Oswald for headings */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+
+/* Margin, padding and border defauls changed to 0 and none as defaults */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* General Shared Styling Rules */
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    color: #3a3a3a
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    color: #252525
+}
