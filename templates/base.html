@@ -12,22 +12,27 @@
     <script src="https://kit.fontawesome.com/27ecbfa54d.js" crossorigin="anonymous"></script>
     <title>KidsTravel</title>
 </head>
+
 <body>
     <!-- Header with link to profile page & site navigation -->
     <header>
-        <a href="#" id="header_profile_link">Log In</a>
+        <a href="#" id="header_profile_link">
+            <i class="fa fa-user" aria-hidden="true">  Account</i>
+        </a>
         <a href="{% url 'home' %}"><h1>KidsTravel</h1></a>
         <!-- Responsive Nav Bar code inspired by https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
         <div class="topnav">
-            <a href="#home" class="active">Logo</a>
             <!-- Navigation links (hidden by default) -->
-            <div id="myLinks">
+            <div id="nav_links">
               <a href="{% url 'home' %}">Find Experience</a>
               <a href="#">Profile</a>
               <a href="#">About Us</a>
             </div>
+              <!-- Nav Bar Toggle -->
+            <a href="javascript:void(0);" id="nav_bar_toggle" onclick="navBarToggle()">
+            <i class="fa fa-bars"></i>
+            </a>
     </header>
-    
 
     {% block content %}
     <!-- Page specific content goes here -->
@@ -42,30 +47,28 @@
         <ul id="social_links">
             <li class="social_list_item">
                 <a target="_blank" href="#">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                    <span class="sr-only">Facebook</span>
+                    <i class="fa fa-facebook" aria-hidden="true", alt="Facebook"></i>
                 </a>
             </li>
             <li class="social_list_item">
                 <a target="_blank" href="#">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                    <span class="sr-only">Twitter</span>
+                    <i class="fa fa-twitter" aria-hidden="true", alt="Twitter"></i>
                 </a>
             </li>
             <li class="social_list_item">
                 <a target="_blank" href="#">
-                    <i class="fa fa-pinterest" aria-hidden="true"></i>
-                    <span class="sr-only">Pinterest</span>
+                    <i class="fa fa-pinterest" aria-hidden="true", alt="Pinterest"></i>
                 </a>
             </li>
             <li class="social_list_item">
                 <a target="_blank" href="#">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                    <span class="sr-only">Instagram</span>
+                    <i class="fa fa-instagram" aria-hidden="true", alt="Instagram"></i>
                 </a>
             </li>
         </ul>
     </footer>
 
+
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

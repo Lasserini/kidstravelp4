@@ -39,13 +39,71 @@ header {
 
 header h1 {
     color: #fafafa;
-    text-align: center;
     padding-top: 14px;
 }
 
 #header_profile_link {
     float: left;
 }
+
+#header_profile_link {
+    padding: 4px;
+    margin: 22px 10px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #fafafa;
+    background: #f0511c;
+    border: solid 1px;
+    border-color: #205fbe;
+    padding: auto 5px;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+
+#header_profile_link:hover {
+    background-color:#064221;
+    border: solid 1px;
+    border-color: black;
+}
+
+.topnav {
+    float: right;
+    overflow: hidden;
+    background-color: #7e1881;
+}
+
+.topnav #nav_links {
+    display: none;
+  }
+
+.topnav a {
+    color: #fafafa;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+  }
+
+.topnav a:hover {
+    color: #fafafa;
+    background: #f0511c;
+  }
+
+#nav_bar_toggle {
+    background: #7e1881;
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 18px;
+  }
+
+#nav_bar_toggle:hover {
+    color: #fafafa;
+    background: #f0511c;
+  }
+
 
 /* Footer Styling */
 footer {
