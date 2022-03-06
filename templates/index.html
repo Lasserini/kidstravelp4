@@ -1,7 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>This is block content</h2>
+  <h2>This is block content</h2>
+
+  <form method="get">
+    {{ filter.form.as_p }}
+    <button type="submit">Search</button>
+  </form>
+
+  <ul>
+  {% for experience in filter.qs %}
+    <li>{{ experience.name }}</li>
+  {% endfor %}
+  </ul>
 {%endblock%}
 
 <!-- 

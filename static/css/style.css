@@ -20,3 +20,29 @@ h1, h2, h3, h4, h5 {
     text-transform: uppercase;
     color: #252525
 }
+
+h1 {
+    letter-spacing: 2px;
+    font-size: 32px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header Styling */
+header {
+    height: 80px;
+    background-color: #205fbe;
+    color: #fafafa;
+}
+
+header h1 {
+    color: #fafafa;
+    text-align: center;
+    padding-top: 14px;
+}
+
+#header_profile_link {
+    float: left;
+}

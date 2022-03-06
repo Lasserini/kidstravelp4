@@ -12,8 +12,19 @@
     <title>KidsTravel</title>
 </head>
 <body>
+    <!-- Header with link to profile page & site navigation -->
     <header>
-        <h1>Hallo Django!</h1>
+        <a href="#" id="header_profile_link">Log In</a>
+        <a href="{% url 'home' %}"><h1>KidsTravel</h1></a>
+        <!-- Responsive Nav Bar code inspired by https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
+        <div class="topnav">
+            <a href="#home" class="active">Logo</a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+              <a href="#news">News</a>
+              <a href="#contact">Contact</a>
+              <a href="#about">About</a>
+            </div>
     </header>
     
 

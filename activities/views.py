@@ -19,9 +19,6 @@ def search(request):
     return render(request, 'search/index.html', {'filter': experience_filter})
 
 
-
-
-
 # class ExperienceView(generic.ListView):
 #	model = Experience
 #	queryset = Experience.objects.all().order_by('category')

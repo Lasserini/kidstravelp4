@@ -3,6 +3,7 @@ from .models import Experience
 
 
 class ExperienceFilter(django_filters.FilterSet):
+
     class Meta:
         model = Experience
-        fields = ['category', 'city', 'price', 'name', ]
+        fields = ['category', 'city', 'price', ]
