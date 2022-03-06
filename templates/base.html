@@ -9,6 +9,7 @@
     <meta name="description" content="KidsTravel helps you find activities whilst traveling with children">
     <meta name="keywords" content="kids, children, travel, vacation, holiday, activities, Florence, Copenhagen">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/27ecbfa54d.js" crossorigin="anonymous"></script>
     <title>KidsTravel</title>
 </head>
 <body>
@@ -21,9 +22,9 @@
             <a href="#home" class="active">Logo</a>
             <!-- Navigation links (hidden by default) -->
             <div id="myLinks">
-              <a href="#news">News</a>
-              <a href="#contact">Contact</a>
-              <a href="#about">About</a>
+              <a href="{% url 'home' %}">Find Experience</a>
+              <a href="#">Profile</a>
+              <a href="#">About Us</a>
             </div>
     </header>
     
@@ -33,12 +34,38 @@
     {% endblock content %}
 
     <footer>
-        <p>This is a footer</p>
+        <p id="made_by">
+            KidsTravel by<br>
+            Lasse Poulsen
+        </p>
+        <!-- Actual links not added, as its a demo project for now :) -->
+        <ul id="social_links">
+            <li class="social_list_item">
+                <a target="_blank" href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <span class="sr-only">Facebook</span>
+                </a>
+            </li>
+            <li class="social_list_item">
+                <a target="_blank" href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <span class="sr-only">Twitter</span>
+                </a>
+            </li>
+            <li class="social_list_item">
+                <a target="_blank" href="#">
+                    <i class="fa fa-pinterest" aria-hidden="true"></i>
+                    <span class="sr-only">Pinterest</span>
+                </a>
+            </li>
+            <li class="social_list_item">
+                <a target="_blank" href="#">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <span class="sr-only">Instagram</span>
+                </a>
+            </li>
+        </ul>
     </footer>
-
 
 </body>
 </html>
-
-
-

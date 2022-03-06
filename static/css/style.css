@@ -46,3 +46,60 @@ header h1 {
 #header_profile_link {
     float: left;
 }
+
+/* Footer Styling */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #205fbe;
+    color: #fafafa;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+#made_by {
+    float: left;
+    text-align: center;
+    width: 50%;
+    font-size: 18px;
+    padding-top: 14px;
+}
+
+#social_links {
+    float: right;
+    text-align: center;
+    width: 50%;
+}
+
+.social_list_item {
+    display: inline-block;
+}
+
+.social_list_item a i {
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    margin-top: 22px;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #fafafa;
+    background: #f0511c;
+    border: solid 1px;
+    border-color: #205fbe;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+
+.social_list_item i:hover {
+    background: #064221;
+    border: solid 1px;
+    border-color: black;
+}
