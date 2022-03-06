@@ -161,3 +161,9 @@ footer ul {
     border: solid 1px;
     border-color: black;
 }
+
+/* Hero Image Styling */
+#hero_image {
+    width: 100%;
+    height: auto;
+}

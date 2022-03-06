@@ -1,7 +1,10 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-  <h2>This is block content</h2>
+  <div id="hero_container">
+    <img src="{% static 'images/kidstravel_hero.jpg' %}" id="hero_image" alt="Two kids enjoying a mountain view">
+  </div>>
 
   <form method="get">
     {{ filter.form.as_p }}
