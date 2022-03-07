@@ -40,11 +40,13 @@
       <button type="submit">Search</button>
     </form>
 
+    <div class="row">
     <ul>
-    {% for experience in filter.qs %}
-      <li>{{ experience.name }}</li>
-    {% endfor %}
+      {% for experience in queryset %}
+        <li>{{ experience.name }}</li>
+      {% endfor %}
     </ul>
+  </div>
 </div>
 {%endblock%}
 

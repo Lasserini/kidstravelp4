@@ -14,6 +14,9 @@ class HomeView(View):
 # The SearchExp view
 def search(request):
     qs = Experience.objects.all()
+    city_chosen = request.Get.get('city_chosen')
+    category_chosen = request.Get.get('category_chosen')
+    free_chosen = request.Get.get('free_chosen')
     
 
 # class ExperienceView(generic.ListView):
