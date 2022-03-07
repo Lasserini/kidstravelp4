@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+
+<div class="auth_form">
+  <h2>{% trans "Sign In" %}</h2>
+  <br>
+  <p>{% blocktrans %}If you have not created an account yet, then please
+    <a href="{{ signup_url }}" class="auth_internal_link">sign up</a> first.{% endblocktrans %}</p>
+  <br>
+  <form class="login" method="POST" action="{% url 'account_login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <button class="primaryAction auth_button" type="submit">{% trans "Sign In" %}</button>
+  </form>
+</div>
+
+{% endblock %}

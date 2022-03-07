@@ -16,17 +16,27 @@
 <body>
     <!-- Header with link to profile page & site navigation -->
     <header>
-        <a href="#" id="header_profile_link">
-            <i class="fa fa-user" aria-hidden="true">  Account</i>
+        {% if user.is_authenticated %}
+        <a href="{% url 'account_logout' %}" class="header_login">
+            <i class="fa fa-user" aria-hidden="true"> Logout</i>
         </a>
+        {% else %}
+        <a href="{% url 'account_login' %}" class="header_login">
+            <i class="fa fa-user" aria-hidden="true"> Log In</i>
+        </a>
+        {% endif %}
         <a href="{% url 'home' %}"><h1>KidsTravel</h1></a>
         <!-- Responsive Nav Bar code inspired by https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
         <div class="topnav">
             <!-- Navigation links (hidden by default) -->
             <div id="nav_links">
-              <a href="{% url 'home' %}">Find Experience</a>
-              <a href="#">Profile</a>
-              <a href="#">About Us</a>
+                <a href="{% url 'home' %}">Find Experience</a>
+                {% if user.is_authenticated %}
+                <a href="#">Account Dashboard</a>
+                {% else %}
+                <a href="{% url 'account_login' %}">Log In / Sign Up</a>
+                {% endif %}
+                <a href="#">About Us</a>
             </div>
               <!-- Nav Bar Toggle -->
             <a href="javascript:void(0);" id="nav_bar_toggle" onclick="navBarToggle()">

@@ -13,7 +13,6 @@ body {
     font-family: Roboto, sans-serif;
     font-size: 16px;
     color: #3a3a3a;
-    background-color: #f0511c;
 }
 
 h1, h2, h3, h4, h5 {
@@ -43,13 +42,13 @@ header h1 {
     padding-top: 14px;
 }
 
-#header_profile_link {
+.header_login {
     float: left;
 }
 
-#header_profile_link {
+.header_login {
     padding: 4px;
-    margin: 22px 10px;
+    margin: 22px 5px;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
@@ -63,7 +62,7 @@ header h1 {
     -webkit-transition: all 0.3s ease-in-out;
 }
 
-#header_profile_link:hover {
+.header_login:hover {
     background-color:#078b2f;
     border: solid 1.5px;
     border-color: black;
@@ -167,6 +166,44 @@ footer ul {
     height: 80px;
 }
 
+/* Authentication sites styling */
+.auth_form {
+    padding: 20px;
+    line-height: 150%;
+}
+
+.auth_button {
+    padding: 8px 6px;
+    border-radius: 10%;
+    font-size: 18px;
+    color: #fafafa;
+    background: #f0511c;
+    border: solid 1.5px;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.auth_button:hover {
+    background: #078b2f;
+    border: solid 1.5px;
+    border-color: black;
+}
+
+.auth_internal_link {
+    color: #078b2f;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.auth_internal_link:hover {
+    font-weight: bolder;
+}
+
+
+
 /* Hero Image Styling */
 #hero_image {
     width: 100%;
@@ -204,8 +241,4 @@ footer ul {
     background: #078b2f;
     border: solid 1.5px;
     border-color: black;
-}
-
-#search_result {
-    display: none;
 }
