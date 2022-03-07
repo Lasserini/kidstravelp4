@@ -204,13 +204,60 @@ footer ul {
 
 
 
-/* Hero Image Styling */
+/* Index page styling */
 #hero_image {
     width: 100%;
     height: auto;
 }
 
-/* index page styling */
+#welcome_text {
+    text-align: center;
+}
+
+#welcome_text h3 {
+    margin: 10px auto;
+}
+
+#welcome_text p {
+    margin: 0 5px;
+}
+
+#get_started_container {
+    height: 80px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#search_link, #profile_link {
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    font-size: 22px;
+}
+
+#search_link {
+    float: left;
+    background-color: #205fbe;
+}
+
+#profile_link {
+    float: right;
+    background-color: #f0511c;
+}
+
+#search_link:hover, #profile_link:hover {
+    background-color: #078b2f;
+}
+
+#search_link a, #profile_link a {
+    text-decoration: none;
+    color: #fafafa;
+    position: relative;
+    top: 26px;
+}
+
+/* results page styling */
 #search_container h2 {
     text-align: center;
     letter-spacing: 1px;
@@ -225,13 +272,13 @@ footer ul {
 }
 
 #search_btn {
-    background-color: #205fbe;
+    background-color: #f0511c;
     color: #fafafa;
-    padding: 5px;
+    font-size: 18px;
+    padding: 8px 6px;
     border-radius: 10%;
-    margin-top: 5px;
+    margin-top: 15px;
     border: solid 1.5px;
-    border-color: #205fbe;
     transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;

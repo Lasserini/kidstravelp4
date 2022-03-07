@@ -30,11 +30,11 @@
         <div class="topnav">
             <!-- Navigation links (hidden by default) -->
             <div id="nav_links">
-                <a href="{% url 'home' %}">Find Experience</a>
+                <a href="{% url 'results' %}">Find Experience</a>
                 {% if user.is_authenticated %}
-                <a href="#">Account Dashboard</a>
+                <a href="#">Profile Page</a>
                 {% else %}
-                <a href="{% url 'account_login' %}">Log In / Sign Up</a>
+                <a href="{% url 'account_login' %}">Log In/Sign Up</a>
                 {% endif %}
                 <a href="#">About Us</a>
             </div>

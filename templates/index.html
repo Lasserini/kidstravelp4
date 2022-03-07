@@ -6,24 +6,26 @@
     <img src="{% static 'images/kidstravel_hero.jpg' %}" id="hero_image" alt="Two kids enjoying a mountain view">
   </div>
 
-  <div id="search_container">
-    <h2>Find Experience</h2>
-    <!-- The form that allows the users to search for experiences -->
-    <form method="get", action="." id="search_form">
-      {{myFilter.form}}
+  <div id="welcome_text">
+    <h3>Greetings Traveling Parent!</h3>
+    <p>Thank you for visiting KidsTravel, the site that let your locate amazing kids activies whilst traveling.
       <br>
-      <button type="submit" id="search_btn">Search</button>
-    </form>
-
-    <div id="search_result">
-    <ul>
-      {% for experience in experiences %}
-        <li><h3>{{ experience.name }}</h3></li>
-        <li>{{ experience.city }}</li>
-        <li>{{ experience.category }}</li>
-        <li><p>{{ experience.excerpt }}</p></li>
-      {% endfor %}
-    </ul>
+      <br>
+      This early version of the site covers Copenhagen & Florence, but future updates will expand and allow you to share your own amazing kids traveling tips!
+    </p>
   </div>
-</div>
+  <div id="get_started_container">
+    <div id="search_link" onclick='location.href="{% url 'results' %}";' style="cursor: pointer;">
+      <a href="{% url 'results' %}">Start Here!</a>
+    </div>
+    {% if user.is_authenticated %}
+    <div id="profile_link" onclick="location.href='#';" style="cursor: pointer;">
+      <a href="#">Profile Page</a>
+    </div>
+    {% else %}
+    <div id="profile_link" onclick='location.href="{% url 'account_login' %}";' style="cursor: pointer;">
+      <a href="{% url 'account_login' %}">Log In/Sign Up</a>
+    </div>
+    {% endif %}
+  </div>
 {%endblock%}

@@ -1,5 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div id="search_container">
+    <h2>Find Experience</h2>
+    <!-- The form that allows the users to search for experiences -->
+    <form method="get", action="." id="search_form">
+      {{myFilter.form}}
+      <br>
+      <button type="submit" id="search_btn">Search</button>
+    </form>
+  </div>
 
+  <!-- The search result output list -->
+  <div id="search_result">
+    <ul>
+      {% for experience in experiences %}
+        <li><h3>{{ experience.name }}</h3></li>
+        <li>{{ experience.city }}</li>
+        <li>{{ experience.category }}</li>
+        <li><p>{{ experience.excerpt }}</p></li>
+      {% endfor %}
+    </ul>
+  </div>
 {%endblock%}
