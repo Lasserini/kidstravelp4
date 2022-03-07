@@ -6,15 +6,13 @@ from .filters import ExperienceFilter
 
 # The Index Search page view
 def indexView(request):
-    experience = Experience.objects.all()
+    experiences = Experience.objects.all()
 
-    myFilter = ExperienceFilter()
+    myFilter = ExperienceFilter(request.GET, queryset=experiences)
+    experiences = myFilter.qs
 
-    context = {'experience': experience, 'myFilter': myFilter}
+    context = {'experiences': experiences, 'myFilter': myFilter}
     return render(request, 'index.html', context)
-
-
-
 
 
 # The Index page view

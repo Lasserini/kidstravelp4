@@ -9,44 +9,14 @@
   <div id="search_container">
     <h2>Find Experience</h2>
     <!-- The form that allows the users to search for experiences -->
-    <form action="get">
-      {{myFilter.form}}
-    </form>
-
     <form method="get", action=".">
-      <div>
-        <label for="city">City:</label>
-        <select id="city" name="city_chosen">
-          <option selected>Choose...</option>
-          <option value="copenhagen">Copenhagen</option>
-          <option value="florence">Florence</option>
-        </select>
-      </div>
-      <div>
-        <label for="category">Category:</label>
-        <select id="category" name="category_chosen">
-          <option selected>Choose...</option>
-          <option value="museum">Museum</option>
-          <option value="park">Park</option>
-          <option value="day_trip">Day Trip</option>
-          <option value="cafe">Cafe</option>
-          <option value="playground">Playgroun</option>
-          <option value="monument">Monument</option>
-        </select>
-      </div>
-      <div>
-        <p>Only show free experiences?</p>
-        <input type="radio" id="yes" name="free_chosen" value="0">
-        <label for="age1">Yes</label>
-        <input type="radio" id="no" name="free_chosen" value="1">
-        <label for="age2">No</label> 
-      </div>
+      {{myFilter.form}}
       <button type="submit">Search</button>
     </form>
 
     <div class="row">
     <ul>
-      {% for experience in queryset %}
+      {% for experience in experiences %}
         <li>{{ experience.name }}</li>
       {% endfor %}
     </ul>
