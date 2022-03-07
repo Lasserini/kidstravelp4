@@ -13,7 +13,7 @@ body {
     font-family: Roboto, sans-serif;
     font-size: 16px;
     color: #3a3a3a;
-    background-color: #205fbe;
+    background-color: #f0511c;
 }
 
 h1, h2, h3, h4, h5 {
@@ -163,8 +163,20 @@ footer ul {
     border-color: black;
 }
 
+.clear {
+    height: 80px;
+}
+
 /* Hero Image Styling */
 #hero_image {
     width: 100%;
     height: auto;
+}
+
+/* index page styling */
+#search_container h2 {
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 28px;
 }

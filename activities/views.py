@@ -1,23 +1,20 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Experience, Review
-from .filters import ExperienceFilter
 
 
 # The Index page view
 class HomeView(View):
     template_name = 'index.html'
 
-    def get(self, request, *args, **kwargs):
+    def get(self, request):
         return render(request, 'index.html')
 
 
-# The Experience Filter View
+# The SearchExp view
 def search(request):
-    experience_list = Experience().objects.all()
-    experience_filter = ExperienceFilter(request.GET, queryset=experience_list)
-    return render(request, 'search/index.html', {'filter': experience_filter})
-
+    qs = Experience.objects.all()
+    
 
 # class ExperienceView(generic.ListView):
 #	model = Experience

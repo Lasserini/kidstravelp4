@@ -1,5 +1,5 @@
-import django_filters
 from .models import Experience
+import django_filters
 
 
 class ExperienceFilter(django_filters.FilterSet):
