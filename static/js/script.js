@@ -7,3 +7,13 @@ function navBarToggle() {
         x.style.display = "block";
         }
     }
+
+
+// Function to hide hero image & display search results upon a search
+const searchClick = document.getElementById("search_btn");
+searchClick.addEventListener("click", hideImgShowResults);
+
+function hideImgShowResults() {
+    document.getElementById("hero_image").style.display = "none";
+    document.getElementById("search_result").style.display = "inline-block";
+}

@@ -180,3 +180,32 @@ footer ul {
     font-weight: 900;
     font-size: 28px;
 }
+
+#search_form {
+    text-align: center;
+    font-size: 16px;
+    margin: 10px auto;
+}
+
+#search_btn {
+    background-color: #205fbe;
+    color: #fafafa;
+    padding: 5px;
+    border-radius: 10%;
+    margin-top: 5px;
+    border: solid 1.5px;
+    border-color: #205fbe;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+#search_btn:hover {
+    background: #078b2f;
+    border: solid 1.5px;
+    border-color: black;
+}
+
+#search_result {
+    display: none;
+}

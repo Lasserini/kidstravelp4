@@ -9,35 +9,21 @@
   <div id="search_container">
     <h2>Find Experience</h2>
     <!-- The form that allows the users to search for experiences -->
-    <form method="get", action=".">
+    <form method="get", action="." id="search_form">
       {{myFilter.form}}
-      <button type="submit">Search</button>
+      <br>
+      <button type="submit" id="search_btn">Search</button>
     </form>
 
-    <div class="row">
+    <div id="search_result">
     <ul>
       {% for experience in experiences %}
-        <li>{{ experience.name }}</li>
+        <li><h3>{{ experience.name }}</h3></li>
+        <li>{{ experience.city }}</li>
+        <li>{{ experience.category }}</li>
+        <li><p>{{ experience.excerpt }}</p></li>
       {% endfor %}
     </ul>
   </div>
 </div>
 {%endblock%}
-
-
-
-
-
-<!-- 
-<form method="get">
-    {{ filter.form.as_p }}
-    <button type="submit">Search</button>
-  </form>
-  <ul>
-  {% for experience in filter.qs %}
-    <li>{{ experience.name }}</li>
-  {% endfor %}
-  </ul>
-
-
--->
