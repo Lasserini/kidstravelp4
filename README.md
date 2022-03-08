@@ -14,19 +14,23 @@ fletched version of the site would incorporate functionality to allow users to a
 
 Users can search for experiences, write their own review of the experiences and like experiences and reviews.
 
-### 1.2 Design guidelines
+### 1.2 Design approach
+The site was build using an agile methodology. The method applied was a Kanban Board.
+
+
+### 1.3 Design guidelines
 Simple, intuitive, stick to a few colours & designpatterns throughout the site. Simple does it.
 
-### 1.3 Project goals
+### 1.4 Project goals
 - Provide a proof of concept.
 - Add meaningful search mechanisms.
 - Allow users to post reviews of the added experiences.
 
-### 1.4 Target audience
+### 1.5 Target audience
 - Parents traveling with children.
 - Parents seeking local activities with children could also utilize the database.
 
-### 1.5 User stories
+### 1.6 User stories
 - As an owner, I want to post new activities, so the site offers stronger value.
 - As an owner, I want to provide users with quality content.
 - As an owner, I want allow users to create a profile.
@@ -36,8 +40,7 @@ Simple, intuitive, stick to a few colours & designpatterns throughout the site. 
 - As a user, I want an search by city.
 - As a user, I want an create a user account.
 
-
-### 1.6 Design
+### 1.7 Design
 
 -   #### Typography
     -   The Roboto font is the main font used with Sans Serif as the fallback font in case Roboto isn't being imported into the site correctly. Oswald is used for headings, also with Sand Serif as fallback.
@@ -107,6 +110,8 @@ Simple, intuitive, stick to a few colours & designpatterns throughout the site. 
     - Google fonts were used to import the Roboto and Oswald fonts used throughout the site.
 1. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used to add icons for visual and user experience (UX) purposes.
+1. [Django:](https://www.djangoproject.com/)
+    - The site is build within the Django Framework.
 1. [Gitpod](https://gitpod.io/)
     - Gitpod was used to develop the website.
 1. [GitHub:](https://github.com/)
@@ -121,23 +126,25 @@ Simple, intuitive, stick to a few colours & designpatterns throughout the site. 
     - Used to validate the HTML code.
 1. [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
     - Used to validate the CSS code.
+1. [PEP8 Validator](http://pep8online.com/)
+    - Used to validate the Python code.
+1. [JSHint](https://jshint.com/)
+    - Used to validate the JavaScript code.
 
-## 4. Testing    (UPDATE links)
-The testing process can be found [here.](https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/TESTING.md)
+## 4. Testing
+The testing process can be found [here.](https://github.com/Lasserini/kidstravelp4/blob/main/testing.md)
 
 ## 5. Deployment
 
 ### 5.1 GitHub Pages
 
-The project was deployed to GitHub Pages using the following steps...
+The project was deployed to Heroku using the following steps...
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+1. Log in to Heroku.
+2. Set correct config_vars
+3. Connect to postgres database.
+4. Connect Heroku to Github Repository.
+5. Deploy site.
 
 ### 5.2 Making a Local Clone
 
@@ -169,7 +176,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Code
 
-ADD ackh!
+- Responsive Nav Bar code inspired by https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
 
 ### Content
 
