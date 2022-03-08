@@ -41,7 +41,19 @@
 <!-- Reviews -->
 {% for review in reviews %}
   <div class="search_result_item">
-        <h3>{{ review.rating }} {{ review.title }}</h3>
+        <h3>{{ review.title }} 
+            {% if review.rating == 1  %}
+                *
+            {% elif review.rating == 2 %}
+                **
+            {% elif review.rating == 3 %}
+                ***
+            {% elif review.rating == 4 %}
+                ****
+            {% else %}
+                *****
+            {% endif %}
+        </h3>
         <h4>By {{ review.username }}</h4>
         <span>{{ review.created_on }}</span>
         <p>{{ review.content }}</p>
