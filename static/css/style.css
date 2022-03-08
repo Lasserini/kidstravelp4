@@ -1,7 +1,7 @@
 /* Import from Google Fonts. Roboto as the main font and Oswald for headings */
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
 
-/* Margin, padding and border defauls changed to 0 and none as defaults */
+/* Margin, padding and border defaults changed to 0 and none as defaults */
 * {
     margin: 0;
     padding: 0;
@@ -56,7 +56,6 @@ header h1 {
     background: #f0511c;
     border: solid 1.5px;
     border-color: #205fbe;
-    padding: auto 5px;
     transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
