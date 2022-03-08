@@ -1,49 +1,49 @@
 <h1 align="center">KidsTravel</h1>
 
-<h2 align="center"><img src=""></h2>    ADD IMAGE UPON COMPLETION
+<h2 align="center"><img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/readme_image.png"></h2>
 
-This website is a concept model for a Website that attempts to help parents traveling with their children. It provides search functionality to find
-experiences based on city and category filtering. This demo concept contains prepopulated experiences added for Florence & Copenhagen, whilst a fully
-fletched version of the site would incorporate functionality to allow users to add additional experiences to the database.
-
-Users can search for experiences, write their own review of the experiences and like experiences and reviews.
 
 [Visit the deployed website](https://kids-travel.herokuapp.com/)
 
 ## 1. User Experience (UX)
 
 ### 1.1 Project introduction
-FILLER CONTENT
+This website is a concept model for a Website that attempts to help parents traveling with their children. It provides search functionality to find
+experiences based on city and category filtering. This demo concept contains prepopulated experiences added for Florence & Copenhagen, whilst a fully
+fletched version of the site would incorporate functionality to allow users to add additional experiences to the database.
+
+Users can search for experiences, write their own review of the experiences and like experiences and reviews.
 
 ### 1.2 Design guidelines
-FILLER CONTENT
+Simple, intuitive, stick to a few colours & designpatterns throughout the site. Simple does it.
 
 ### 1.3 Project goals
-- FILLER CONTENT
-- FILLER CONTENT
-- FILLER CONTENT
+- Provide a proof of concept.
+- Add meaningful search mechanisms.
+- Allow users to post reviews of the added experiences.
 
 ### 1.4 Target audience
 - Parents traveling with children.
 - Parents seeking local activities with children could also utilize the database.
 
 ### 1.5 User stories
-- As an owner, I want to 
-- As an owner, I want to 
-- As an owner, I want 
-- As a user, I want to 
-- As a user, I want to 
-- As a user, I want an 
+- As an owner, I want to post new activities, so the site offers stronger value.
+- As an owner, I want to provide users with quality content.
+- As an owner, I want allow users to create a profile.
+- As a user, I want to find travel activities for my children.
+- As a user, I want to share how an activity was for me.
+- As a user, I want an search by category.
+- As a user, I want an search by city.
+- As a user, I want an create a user account.
+
 
 ### 1.6 Design
--   #### Colour Scheme
-    -   The main colours used are 
 
 -   #### Typography
     -   The Roboto font is the main font used with Sans Serif as the fallback font in case Roboto isn't being imported into the site correctly. Oswald is used for headings, also with Sand Serif as fallback.
 
 *   ### Wireframes               /// NEEDS UPDATE, links kept to allow easy reuse of setup
-    Desktop 800px+ | Smaller Devices Below 800px
+    Desktop | Phone
     --- | --- |
     <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/desktop/index_desktop.png">Index</a> | <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/mobile/index_mobile.png">Index</a> 
     <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/desktop/individual_desktop.png">Individual Therapy</a> | <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/mobile/individual_mobile.png">Individual Therapy</a>

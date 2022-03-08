@@ -20,7 +20,7 @@
     </div>
     {% if user.is_authenticated %}
     <div id="profile_link" onclick="location.href='#';" style="cursor: pointer;">
-      <a href="#">Profile Page</a>
+      <a href="{% url 'account_logout' %}">Log Out</a>
     </div>
     {% else %}
     <div id="profile_link" onclick='location.href="{% url 'account_login' %}";' style="cursor: pointer;">
