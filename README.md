@@ -42,23 +42,20 @@ Simple, intuitive, stick to a few colours & designpatterns throughout the site. 
 -   #### Typography
     -   The Roboto font is the main font used with Sans Serif as the fallback font in case Roboto isn't being imported into the site correctly. Oswald is used for headings, also with Sand Serif as fallback.
 
-*   ### Wireframes               /// NEEDS UPDATE, links kept to allow easy reuse of setup
+*   ### Wireframes
     Desktop | Phone
     --- | --- |
-    <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/desktop/index_desktop.png">Index</a> | <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/mobile/index_mobile.png">Index</a> 
-    <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/desktop/individual_desktop.png">Individual Therapy</a> | <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/mobile/individual_mobile.png">Individual Therapy</a>
-    <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/desktop/couples_desktop.png">Couples Therapy</a> | <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/mobile/couples_mobile.png">Couples Therapy</a>
-    <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/desktop/about_me_desktop.png">About Me</a> | <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/mobile/about_me_mobile.png">About Me</a>
-    <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/desktop/price_desktop.png">Price</a> | <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/mobile/price_mobile.png">Price</a>
-    <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/desktop/contact_desktop.png">Contact</a> | <a href="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/wireframes/mobile/contact_mobile.png">Contact</a>
+    <a href="https://github.com/Lasserini/kidstravelp4/blob/main/media/wireframes/index_desktop.png">Index</a> | <a href="https://github.com/Lasserini/kidstravelp4/blob/main/media/wireframes/index_mobile.png">Index</a> 
+    <a href="https://github.com/Lasserini/kidstravelp4/blob/main/media/wireframes/search_desktop.png">Search</a> | <a href="https://github.com/Lasserini/kidstravelp4/blob/main/media/wireframes/search_mobile.png">Search</a>
+    <a href="https://github.com/Lasserini/kidstravelp4/blob/main/media/wireframes/experience_desktop.png">Experience</a> | <a href="https://github.com/Lasserini/kidstravelp4/blob/main/media/wireframes/experience_mobile.png">Experience</a>
 
 
 ## 2. Features
 ### 2.1 Current Features
 *   General   
-    - filler
-    - filler
-    - filler
+    - User authentication, account creation etc
+    - Search functionality
+    - Users are able to post reviews of the listed activities
     
     <br>
 *   The Header includes:
@@ -71,30 +68,38 @@ Simple, intuitive, stick to a few colours & designpatterns throughout the site. 
     - **Social Media links**
     - **Site Name**
 
-The Header and Footer are consistent and located on every page in the site.
-*   The Welcome (Index) page includes:
-    - **A larger profile picture on large screens** to give the user a strong visual illustration of the Psychotherapist (for small screens this feature is applied on the About Me page instead, this is done for visual design purposes).
-    - **Box with key information** the very first thing a user comes across, displaying what services are on offer, where the clinic(s) are located and provides contact information. The box allows the user to quickly determine the relevance and hopefully provides assurance that the service might be worth considering. The box also offers a button to access more information about the Psychotherapist.
-    - **Individual Therapy information** allows the user a brief overview and easy access the content page for one of the two main services.
-    - **Couples Therapy information** allows the user a brief overview and easy access the content page for one of the two main services.
-    - **Contact Information** to allow the user easy access to the site's primary function, which is leading towards a call-to-action of the user actively making contact to book therapy sessions. Throughout the site the contact information is repeated to remind users of making contact. The box also has a link to the contact page which adds a secondary option for contacting the Psychotherapist.
-    - **Information about other services** allows the user brief introduction to the secondary services offered by the Psychotherapist, and provides a link to pricing information.
+    <br>
+*   The Index page includes:
+    - **Hero Image**
+    - **Welcoming Text**
+    - **Links to Search and Log In**
 
     <br>
-*   ANOTHER page includes:
-    
+*   The Search page includes:
+    - **A filtering/search function**
+    - **Excerpt listings of the experiences**
+
+    <br>
+*   The experiences page includes:
+    - **More indepth description of the chosen experience**
+    - **User created reviews**
+    - **Optio for user to submit a review**
 
 ### 2.2 Futures left to implement 
-- filler
-- filler
-- filler
+- Allow users to add new experiences to the database
+- A user dashboard with overview of their posted items
+- Like or up/downvote functionality to experiences and reviews
+- More advanced search options, fx a search function that utilize Map Clustering
 
-## 3. Technologies Used           (UPDATE ACCORDINGLY)
+## 3. Technologies Used
 
 ### 3.1 Languages Used
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JavaScript](https://www.javascript.com/)
+-   [Python](https://www.python.org/)
+
 
 ### 3.2 Frameworks, Libraries & Programs Used
 
@@ -106,8 +111,8 @@ The Header and Footer are consistent and located on every page in the site.
     - Gitpod was used to develop the website.
 1. [GitHub:](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git. And to host the project.
-1. [Image Resizer:](https://imageresizer.com/)
-    - Image Resizer was used to resizing images and edit profile photos for the website.
+1. [Heroku:](https://heroku.com/)
+    - Heroku is used to deploy the final website.
 1. [Balsamic:](https://balsamiq.com/)
     - Balsamiq was used during the design process to create Wireframes.
 1. [Responsive Design Checker:](https://www.responsivedesignchecker.com/)
