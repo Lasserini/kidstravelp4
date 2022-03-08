@@ -331,3 +331,46 @@ footer ul {
 .external_link:hover {
     color: #078b2f;
 }
+
+/* Add and view Reviews styling */
+#add_review {
+    background-color: #205fbe;
+    color: #fafafa;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    display: grid;
+}
+
+#add_review h3 {
+    color: #fafafa;
+}
+
+#add_review form {
+    width: 300px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+#add_review form button {
+    background-color: #f0511c;
+    margin-left: 20px;
+    padding: 4px;
+    border-radius: 15%;
+    color: #fafafa;
+    font-size: 16px;
+}
+
+#add_review form button:hover {
+    background-color: #078b2f;
+}
+
+#add_review a {
+    color: #fafafa;
+    text-decoration: none;
+}
+
+#add_review a:hover {
+    color:#078b2f;
+    font-weight: bolder;
+}

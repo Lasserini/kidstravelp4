@@ -2,25 +2,50 @@
 {% load static %}
 
 {% block content %}
-<div class="search_result_item">
-    <h3>{{ experience.name }}</h3>
-    <h4>{{ experience.category }} in {{ experience.city }}<h4>
-    {% if experience.price == 0 %}
-        <i class="fa fa-check"> Free</i>
-    {% endif %}
-    <p>{{ experience.description }}</p>
-    <br>
-    <a href="{{ experience.directions }}" target="_blank" rel="noopener noreferrer" class="external_link">Find {{ experience.name }} on Google Maps</a>
-    <br>
-    <a href="{{ experience.website }}" target="_blank" rel="noopener noreferrer" class="external_link">Visit {{ experience.name }}'s website</a>
-    <br>
-    {% if "placeholder" in experience.image.url %}
-        <img src="{% static 'images/placeholder.jpg' %}" alt="placeholder image" class="experience_image">
+    <!-- A more expansive version of the experience chosen -->
+    <div class="search_result_item">
+        <h3>{{ experience.name }}</h3>
+        <h4>{{ experience.category }} in {{ experience.city }}<h4>
+        {% if experience.price == 0 %}
+            <i class="fa fa-check"> Free</i>
+        {% endif %}
+        <p>{{ experience.description }}</p>
+        <br>
+        <a href="{{ experience.directions }}" target="_blank" rel="noopener noreferrer" class="external_link">Find {{ experience.name }} on Google Maps</a>
+        <br>
+        <a href="{{ experience.website }}" target="_blank" rel="noopener noreferrer" class="external_link">Visit {{ experience.name }}'s website</a>
+        <br>
+        {% if "placeholder" in experience.image.url %}
+            <img src="{% static 'images/placeholder.jpg' %}" alt="placeholder image" class="experience_image">
+        {% else %}
+            <img src="{{ experience.image.url }}" alt="image of {{ experience.name }}" class="experience_image">
+        {% endif %}
+    </div>
+
+<!-- Form for Users to submit reviews -->
+    <div id="add_review">
+    {% if user.is_authenticated %}
+        <h3>Post Review</h3>
+        <p>Posting as: {{ user.username }}</p>
+        <form method="post">
+            {{ review_form }}
+            {% csrf_token %}
+            <button type="submit">Submit</button>
+        </form>
     {% else %}
-        <img src="{{ experience.image.url }}" alt="image of {{ experience.name }}" class="experience_image">
+        <p>What to add a review?</p>
+        <a href="{% url 'account_login' %}">Log In/Sign Up</a>
+    {% endif %}
+    </div>
+    
+<!-- Reviews -->
+{% for review in reviews %}
+  <div class="search_result_item">
+        <h3>{{ review.rating }} {{ review.title }}</h3>
+        <h4>By {{ review.username }}<h4>
+            {{ review.created_on }}
+        <p>{{ review.content }}</p>
+  </div>
+{% endfor %}
 </div>
-{% endif %}
 {%endblock%}
-
-
-<i class="fa-solid fa-check">Free!</i>
