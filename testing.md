@@ -22,6 +22,13 @@ The large amount of {{% import static %}} etc. is making my validator go bananas
 Nothing of concern. I used an onclick function from html, so JSHINT cant see that the function is actually being used from elsewhere.
 <img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/jshint.png">
 
+### 1.4 Python Validation
+Tested the Python files with most of my custom written code. No problems.
+- Models.py:
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/models_python_validation.png">
+- Views.py:
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/views_python_validation.png">
+
 ## 2. Responsiveness
 To test responsiveness across various devices & screensizes, I used [Responsive Design Checkcer](https://www.responsivedesignchecker.com/), a 17`` laptop & a OnePlus 6T mobile phone.
 
