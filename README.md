@@ -16,7 +16,7 @@ Users can search for experiences, write their own review of the experiences and 
 
 ### 1.2 Design approach
 The site was build using an agile methodology. The method applied was a Kanban Board.
-
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/kanban_board.png">
 
 ### 1.3 Design guidelines
 Simple, intuitive, stick to a few colours & designpatterns throughout the site. Simple does it.

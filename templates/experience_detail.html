@@ -5,7 +5,7 @@
     <!-- A more expansive version of the experience chosen -->
     <div class="search_result_item">
         <h3>{{ experience.name }}</h3>
-        <h4>{{ experience.category }} in {{ experience.city }}<h4>
+        <h4>{{ experience.category }} in {{ experience.city }}</h4>
         {% if experience.price == 0 %}
             <i class="fa fa-check"> Free</i>
         {% endif %}
@@ -42,7 +42,7 @@
 {% for review in reviews %}
   <div class="search_result_item">
         <h3>{{ review.rating }} {{ review.title }}</h3>
-        <h4>By {{ review.username }}<h4>
+        <h4>By {{ review.username }}</h4>
         <span>{{ review.created_on }}</span>
         <p>{{ review.content }}</p>
   </div>

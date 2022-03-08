@@ -1,9 +1,15 @@
 # Testing
 
 ## 1. Code Validation
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
--   [W3C Markup Validator](https://validator.w3.org/#validate_by_input)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+The following validators were used.
+1. [W3C Markup Validator](https://validator.w3.org/#validate_by_input)
+    - Used to validate the HTML code.
+1. [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - Used to validate the CSS code.
+1. [PEP8 Validator](http://pep8online.com/)
+    - Used to validate the Python code.
+1. [JSHint](https://jshint.com/)
+    - Used to validate the JavaScript code.
 
 ### 1.1 CSS Validation
 The test was succesfull and did not report any issues.<br>
@@ -11,24 +17,18 @@ The test was succesfull and did not report any issues.<br>
 
 ### 1.2 HTML Validation
 The first attempt at HTML Validation gave a long list of various items that wasn't allowed in span containers, those containers were changed to divs. Some fixes to the contact formular were also required. Below is the result of the 2nd pass through the tests.
+#### Base Page
+
 #### Index Page
-<img src="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/validation/index_validation.png">
 
-#### Individual Therapy Page
-<img src="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/validation/individual_validation.png">
+#### Results Page
 
-#### Couples Therapy Page
-<img src="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/validation/couples_validation.png">
+#### experience_detail Page
 
-#### About Me Page
-<img src="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/validation/aboutme_validation.png">
 
-#### Price Page
-<img src="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/validation/price_validation.png">
-
-#### Contact Page
-<img src="https://github.com/Lasserini/stine-poulsen-psykoterapeut/blob/master/validation/contact_validation.png">
-
+### 1.3 JavaScript Validation
+Nothing of concern. I used an onclick function from html, so JSHINT cant see that the function is actually being used from elsewhere.
+<img src="ADD LINK">
 
 ## 2. Responsiveness
 To test responsiveness across various devices & screensizes, I used [Responsive Design Checkcer](https://www.responsivedesignchecker.com/), a 15`` laptop & a OnePlus 6T mobile phone.
