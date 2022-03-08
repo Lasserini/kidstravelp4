@@ -296,7 +296,7 @@ footer ul {
     padding: 5px;
 }
 
-.search_result_item:hover {
+.search_hover_link:hover {
     background: #078b2f;
 }
 
@@ -309,4 +309,25 @@ footer ul {
 .experience-link {
     color:#000000;
     font-weight: bolder;
+}
+
+/* Experience Detail Styling. For consistancy the Experience "Card" styling is reused here" */
+.experience_image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.search_result_item i {
+    color: #078b2f;
+    text-transform: none;
+}
+
+.external_link {
+    text-decoration: none;
+    color: #f0511c;
+}
+
+.external_link:hover {
+    color: #078b2f;
 }

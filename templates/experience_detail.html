@@ -2,5 +2,25 @@
 {% load static %}
 
 {% block content %}
-Oh yeah
+<div class="search_result_item">
+    <h3>{{ experience.name }}</h3>
+    <h4>{{ experience.category }} in {{ experience.city }}<h4>
+    {% if experience.price == 0 %}
+        <i class="fa fa-check"> Free</i>
+    {% endif %}
+    <p>{{ experience.description }}</p>
+    <br>
+    <a href="{{ experience.directions }}" target="_blank" rel="noopener noreferrer" class="external_link">Find {{ experience.name }} on Google Maps</a>
+    <br>
+    <a href="{{ experience.website }}" target="_blank" rel="noopener noreferrer" class="external_link">Visit {{ experience.name }}'s website</a>
+    <br>
+    {% if "placeholder" in experience.image.url %}
+        <img src="{% static 'images/placeholder.jpg' %}" alt="placeholder image" class="experience_image">
+    {% else %}
+        <img src="{{ experience.image.url }}" alt="image of {{ experience.name }}" class="experience_image">
+</div>
+{% endif %}
 {%endblock%}
+
+
+<i class="fa-solid fa-check">Free!</i>
