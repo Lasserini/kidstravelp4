@@ -18,3 +18,20 @@ def resultsView(request):
 
     context = {'experiences': experiences, 'myFilter': myFilter}
     return render(request, 'results.html', context)
+
+
+class ExperienceDetail(View):
+
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Experience.objects.all()
+        experience = get_object_or_404(queryset, slug=slug)
+        reviews = experience.reviews.all().order_by('-created_on')
+
+        return render(
+            request,
+            "experience_detail.html",
+            {
+                "experience": experience,
+                "reviews": reviews
+            }
+        )

@@ -1,39 +1,26 @@
 {% extends "base.html" %}
-{% load static %}
 
 {% block content %}
 <div id="search_container">
     <h2>Find Experience</h2>
     <!-- The form that allows the users to search for experiences -->
     <form method="get", action="." id="search_form">
-      {{myFilter.form}}
-      <br>
-      <button type="submit" id="search_btn">Search</button>
+        {{myFilter.form}}
+        <br>
+        <button type="submit" id="search_btn">Search</button>
     </form>
-  </div>
+</div>
 
   <!-- The search result output list -->
   {% for experience in experiences %}
-  <div class="search_result_item" onclick='location.href="#";' style="cursor: pointer;">
+  <div class="search_result_item" onclick='location.href="{% url 'experience_detail' experience.slug  %}";' style="cursor: pointer;">
     <div>
         <h3>{{ experience.name }}</h3>
         <h4>{{ experience.category }} in {{ experience.city }}<h4>
         <p>{{ experience.excerpt }}</p>
-        <a href="#" class="experience-link">Read More</a>
+        <a href="{% url 'experience_detail' experience.slug  %}" class="experience-link">Read More</a>
     </div>
   </div>
   {% endfor %}
 
 {%endblock%}
-
-
-
-
-<!--
-<div class="search_result_image">
-    {% if 'placeholder' in experience.category %}
-    <img src="{% static 'images/placeholder.jpg' %}" alt="Placeholder Image">
-    {% else %}
-    <img src="{{ experience.image.url }}" alt="Image of {{ experience.name }}">
-    {% endif %}
--->
