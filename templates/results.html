@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <div id="search_container">
@@ -12,14 +13,27 @@
   </div>
 
   <!-- The search result output list -->
-  <div id="search_result">
-    <ul>
-      {% for experience in experiences %}
-        <li><h3>{{ experience.name }}</h3></li>
-        <li>{{ experience.city }}</li>
-        <li>{{ experience.category }}</li>
-        <li><p>{{ experience.excerpt }}</p></li>
-      {% endfor %}
-    </ul>
+  {% for experience in experiences %}
+  <div class="search_result_item" onclick='location.href="#";' style="cursor: pointer;">
+    <div>
+        <h3>{{ experience.name }}</h3>
+        <h4>{{ experience.category }} in {{ experience.city }}<h4>
+        <p>{{ experience.excerpt }}</p>
+        <a href="#" class="experience-link">Read More</a>
+    </div>
   </div>
+  {% endfor %}
+
 {%endblock%}
+
+
+
+
+<!--
+<div class="search_result_image">
+    {% if 'placeholder' in experience.category %}
+    <img src="{% static 'images/placeholder.jpg' %}" alt="Placeholder Image">
+    {% else %}
+    <img src="{{ experience.image.url }}" alt="Image of {{ experience.name }}">
+    {% endif %}
+-->
