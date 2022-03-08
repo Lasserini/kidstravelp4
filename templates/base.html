@@ -30,13 +30,8 @@
         <div class="topnav">
             <!-- Navigation links (hidden by default) -->
             <div id="nav_links">
+                <a href="{% url 'home' %}">Home</a>
                 <a href="{% url 'results' %}">Find Experience</a>
-                {% if user.is_authenticated %}
-                <a href="#">Profile Page</a>
-                {% else %}
-                <a href="{% url 'account_login' %}">Log In/Sign Up</a>
-                {% endif %}
-                <a href="#">About Us</a>
             </div>
               <!-- Nav Bar Toggle -->
             <a href="javascript:void(0);" id="nav_bar_toggle" onclick="navBarToggle()">

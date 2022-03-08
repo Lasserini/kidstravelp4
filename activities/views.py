@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
-from django.views import generic, View
-from .models import Experience, Review
+from django.views import View
+from .models import Experience
 from .filters import ExperienceFilter
 from .forms import ReviewForm
 
@@ -41,12 +41,12 @@ class ExperienceDetail(View):
     def post(self, request, slug, *args, **kwargs):
         queryset = Experience.objects.all()
         experience = get_object_or_404(queryset, slug=slug)
-        reviews = experience.reviews.all().order_by('-created_on')
+        reviews = experience.reviews.filter().order_by('-created_on')
 
         review_form = ReviewForm(data=request.POST)
 
         if review_form.is_valid():
-            review_form.instance.username = request.user.username
+            review_form.instance.name = request.user.username
             review = review_form.save(commit=False)
             review.experience = experience
             review.save()

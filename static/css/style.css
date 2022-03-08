@@ -374,3 +374,8 @@ footer ul {
     color:#078b2f;
     font-weight: bolder;
 }
+
+.search_result_item span {
+    font-size: 12px;
+    text-transform: none;
+}
