@@ -49,6 +49,7 @@ class ExperienceDetail(View):
             review_form.instance.name = request.user.username
             review = review_form.save(commit=False)
             review.experience = experience
+            review.username = request.user
             review.save()
         else:
             review_form = ReviewForm()
