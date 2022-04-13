@@ -336,6 +336,17 @@ footer ul {
     color: #078b2f;
 }
 
+/* Return Button Styling */
+#go_back_button {
+    background-color: #f0511c;
+    margin: 10px auto;
+    text-align: center;
+    padding: 4px;
+    border-radius: 15%;
+    color: #fafafa;
+    font-size: 16px;
+}
+
 /* Add and view Reviews styling */
 #add_review {
     background-color: #205fbe;
@@ -365,7 +376,7 @@ footer ul {
     font-size: 16px;
 }
 
-#add_review form button:hover {
+#add_review form button:hover, #go_back_button:hover {
     background-color: #078b2f;
 }
 

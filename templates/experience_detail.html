@@ -15,27 +15,14 @@
         <br>
         <a href="{{ experience.website }}" target="_blank" rel="noopener noreferrer" class="external_link">Visit {{ experience.name }}'s website</a>
         <br>
+        <!-- Return to previous page button -->
+        <button id="go_back_button" onclick="history.back()">Go Back</button>
+        <br>
         {% if "placeholder" in experience.image.url %}
             <img src="{% static 'images/placeholder.jpg' %}" alt="placeholder image" class="experience_image">
         {% else %}
             <img src="{{ experience.image.url }}" alt="image of {{ experience.name }}" class="experience_image">
         {% endif %}
-    </div>
-
-<!-- Form for Users to submit reviews -->
-    <div id="add_review">
-    {% if user.is_authenticated %}
-        <h3>Post Review</h3>
-        <p>Posting as: {{ user.username }}</p>
-        <form method="post">
-            {{ review_form }}
-            {% csrf_token %}
-            <button type="submit">Submit</button>
-        </form>
-    {% else %}
-        <p>What to add a review?</p>
-        <a href="{% url 'account_login' %}">Log In/Sign Up</a>
-    {% endif %}
     </div>
     
 <!-- Reviews -->
@@ -59,5 +46,21 @@
         <p>{{ review.content }}</p>
   </div>
 {% endfor %}
-</div>
+
+    <!-- Form for Users to submit reviews -->
+    <div id="add_review">
+        {% if user.is_authenticated %}
+            <h3>Post Review</h3>
+            <p>Posting as: {{ user.username }}</p>
+            <form method="post">
+                {{ review_form }}
+                {% csrf_token %}
+                <button type="submit">Submit</button>
+            </form>
+        {% else %}
+            <p>What to add a review?</p>
+            <a href="{% url 'account_login' %}">Log In/Sign Up</a>
+        {% endif %}
+        </div>
+
 {%endblock%}
