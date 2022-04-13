@@ -368,6 +368,11 @@ footer ul {
     margin: 10px auto;
 }
 
+#add_review form input {
+    margin: 10px;
+    line-height: 125%;
+}
+
 #add_review form button {
     background-color: #f0511c;
     margin-left: 20px;
