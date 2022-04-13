@@ -171,6 +171,14 @@ footer ul {
     line-height: 150%;
 }
 
+.login input, .signup input {
+    border: solid 2px;
+    padding: 1px;
+    margin: 2px 0;
+}
+
+
+
 .auth_button {
     padding: 8px 6px;
     border-radius: 10%;
@@ -200,8 +208,6 @@ footer ul {
 .auth_internal_link:hover {
     font-weight: bolder;
 }
-
-
 
 /* Index page styling */
 #hero_image {
