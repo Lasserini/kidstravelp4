@@ -13,6 +13,7 @@ body {
     font-family: Roboto, sans-serif;
     font-size: 16px;
     color: #3a3a3a;
+    background-color: lightblue;
 }
 
 h1, h2, h3, h4, h5 {
@@ -382,3 +383,26 @@ footer ul {
     font-size: 12px;
     text-transform: none;
 }
+
+/* Media Queries 900px and up */
+@media only screen and (min-width: 900px) {
+    /* Index Page */
+    #hero_container {
+        margin: 0 20%;
+    }
+
+    #welcome_text h3 {
+        font-size: 28px;
+    }
+
+    #welcome_text p {
+        font-size: 18px;
+        margin: 0 20%;
+    }
+    /* Results Page */
+    .search_result_item {
+        text-align: center;
+        margin: 5px 20%;
+        font-size: 18px;
+    }
+  }

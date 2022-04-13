@@ -12,7 +12,8 @@
 </div>
 
 <!-- The search result output list -->
-{% for experience in experiences %}
+<div id="results_container">
+  {% for experience in experiences %}
   <div class="search_result_item search_hover_link" onclick='location.href="{% url 'experience_detail' experience.slug  %}";' style="cursor: pointer;">
     <div>
         <h3>{{ experience.name }}</h3>
@@ -22,5 +23,6 @@
     </div>
   </div>
 {% endfor %}
+</div>
 
 {%endblock%}
