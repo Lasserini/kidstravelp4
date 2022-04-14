@@ -26,6 +26,11 @@
         </a>
         {% endif %}
         <a href="{% url 'home' %}"><h1>KidsTravel</h1></a>
+        <!-- Navigation links for larger devices -->
+        <div id="desktop_nav">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'results' %}">Find Experience</a>
+        </div>    
         <!-- Responsive Nav Bar code inspired by https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
         <div class="topnav">
             <!-- Navigation links (hidden by default) -->
@@ -35,7 +40,7 @@
             </div>
               <!-- Nav Bar Toggle -->
             <a href="javascript:void(0);" id="nav_bar_toggle" onclick="navBarToggle()">
-            <i class="fa fa-bars"></i>
+                <i class="fa fa-bars"></i>
             </a>
     </header>
 
