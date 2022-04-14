@@ -267,8 +267,9 @@ footer ul {
     top: 26px;
 }
 
-/* results page styling */
+/* Results page styling */
 #search_container h2 {
+    margin-top: 10px;
     text-align: center;
     letter-spacing: 1px;
     font-weight: 900;
