@@ -176,7 +176,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Code
 
-- Responsive Nav Bar code inspired by https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+- Responsive Nav Bar code is inspired by https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
 
 ### Content
 
