@@ -15,3 +15,12 @@ topButton.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 // Functionality for Results page, Scroll to Bottom button
 let bottomButton = document.querySelector(".bottom_button");
 bottomButton.onclick = () => window.scrollTo({ top: 10000, behavior: "smooth" });
+
+// Function that produce a confirmation box before any deleting is done
+function deleteConfirm(){
+    var delebeButton= document.getElementById("delete_review");
+    if (confirm("Confirm Review Deletion")){
+        delebeButton.click();
+        alert("Review Deleted!")
+    }
+}

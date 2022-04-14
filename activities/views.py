@@ -79,3 +79,9 @@ def edit_review(request, review_id):
     context = {'form': form}
    
     return render(request, 'edit_review.html', context)
+
+
+def delete_review(request, review_id):
+    review = get_object_or_404(Review, id=review_id)
+    review.delete()
+    return HttpResponseRedirect("/results")

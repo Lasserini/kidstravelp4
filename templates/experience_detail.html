@@ -49,8 +49,8 @@
             {% if review.username == user or user.is_superuser %}
                 <a href="{% url 'edit' review.id %}">
                     <button >Edit</button>
-                </a>
-                <button type="submit">Delete</button>
+                <a href="{% url 'delete' review.id %}">
+                    <button onmouseover="deleteConfirm()" id="delete_review">Delete</button>
             {% endif %}
         </div>
   </div>
