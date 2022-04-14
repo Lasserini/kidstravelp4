@@ -16,11 +16,19 @@ topButton.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 let bottomButton = document.querySelector(".bottom_button");
 bottomButton.onclick = () => window.scrollTo({ top: 10000, behavior: "smooth" });
 
-// Function that produce a confirmation box before any deleting is done
+// Functions that produce a confirmation box before any deleting is done
 function deleteConfirm(){
-    var delebeButton= document.getElementById("delete_review");
+    var deleteButton= document.getElementById("delete_review");
     if (confirm("Confirm Review Deletion")){
-        delebeButton.click();
+        deleteButton.click();
         alert("Review Deleted!")
+    }
+}
+
+function deleteConfirmTwo(){
+    var deleteButton= document.getElementById("delete_experience");
+    if (confirm("Careful! Confirm Experience Deletion??")){
+        deleteButton.click();
+        alert("Experience Deleted!")
     }
 }

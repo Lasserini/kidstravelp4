@@ -101,3 +101,9 @@ def edit_experience(request, experience_id):
     context = {'form': form}
    
     return render(request, 'edit_experience.html', context)
+
+
+def delete_experience(request, experience_id):
+    experience = get_object_or_404(Experience, id=experience_id)
+    experience.delete()
+    return HttpResponseRedirect("/results")

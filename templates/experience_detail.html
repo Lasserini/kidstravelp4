@@ -27,8 +27,8 @@
             {% if user.is_superuser %}
                 <a href="{% url 'editexp' experience.id %}">
                     <button >Edit</button>
-                <!--<a href="{% url 'delete' experience.id %}">
-                    <button onmouseover="deleteConfirm()" id="delete_review">Delete</button>-->
+                <a href="{% url 'deleteexp' experience.id %}">
+                    <button onmouseover="deleteConfirmTwo()" id="delete_experience">Delete</button>
             {% endif %}
     </div>
     
