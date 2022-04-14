@@ -72,6 +72,8 @@ header h1 {
     float: right;
     overflow: hidden;
     background-color: #7e1881;
+    min-width: 100%;
+    text-align: center;
 }
 
 .topnav #nav_links {
