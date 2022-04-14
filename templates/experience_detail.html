@@ -46,8 +46,8 @@
         <p>{{ review.content }}</p>
         <!-- Options to edit and delete a review if its yours -->
         <div id="comment_editing">
-            {% if review.username == user %}
-                <a href="/edit/{{ item_id }}/">
+            {% if review.username == user or user.is_superuser %}
+                <a href="{% url 'edit' review.id %}">
                     <button >Edit</button>
                 </a>
                 <button type="submit">Delete</button>

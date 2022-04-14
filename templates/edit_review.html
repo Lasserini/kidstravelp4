@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    Hallo Ladies
+
+    <div id="edit_review">
+        {% if review.username == user or user.is_superuser %}
+            <h3>Edit Review</h3>
+            <p>Posting as: {{ user.username }}</p>
+            <form method="post">
+                {{ review_form }}
+                {% csrf_token %}
+                <button type="submit">Save Changes</button>
+            </form>
+        {% else %}
+            <p>Permission Denied</p>
+        {% endif %}
+        </div>
+{%endblock%}

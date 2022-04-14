@@ -63,3 +63,7 @@ class ExperienceDetail(View):
                 "review_form": ReviewForm()
             },
         )
+
+
+def edit_review(request, review_id):
+    return render(request, 'edit_review.html')
