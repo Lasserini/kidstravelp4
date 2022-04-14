@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
 from django.views import View
 from .models import Experience, Review
 from .filters import ExperienceFilter
-from .forms import ReviewForm
+from .forms import ReviewForm, ExperienceForm
 
 
 # The Index Search page view
@@ -85,3 +85,19 @@ def delete_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
     review.delete()
     return HttpResponseRedirect("/results")
+
+
+def edit_experience(request, experience_id):
+    experience = get_object_or_404(Experience, id=experience_id)
+    
+    if request.method == "POST":
+        form = ExperienceForm(request.POST, instance=experience)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/results")
+    else:
+        form = ExperienceForm(instance=experience)
+
+    context = {'form': form}
+   
+    return render(request, 'edit_experience.html', context)

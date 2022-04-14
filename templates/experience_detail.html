@@ -23,6 +23,13 @@
         {% else %}
             <img src="{{ experience.image.url }}" alt="image of {{ experience.name }}" class="experience_image">
         {% endif %}
+        <div id="admin_experience_editing">
+            {% if user.is_superuser %}
+                <a href="{% url 'editexp' experience.id %}">
+                    <button >Edit</button>
+                <!--<a href="{% url 'delete' experience.id %}">
+                    <button onmouseover="deleteConfirm()" id="delete_review">Delete</button>-->
+            {% endif %}
     </div>
     
 <!-- Reviews -->

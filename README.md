@@ -89,7 +89,6 @@ Simple, intuitive, stick to a few colours & designpatterns throughout the site. 
     - **Optio for user to submit a review**
 
 ### 2.2 Futures left to implement 
-- Encorporate stronger delete confirmation
 - Allow users to add new experiences to the database
 - A user dashboard with overview of their posted items
 - Like or up/downvote functionality to experiences and reviews
