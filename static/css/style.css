@@ -322,6 +322,10 @@ footer ul {
     font-weight: bolder;
 }
 
+.button-container {
+    text-align: center;
+}
+
 /* Experience Detail Styling. For consistancy the Experience "Card" styling is reused here" */
 .experience_image {
     max-width: 100%;
@@ -343,8 +347,8 @@ footer ul {
     color: #078b2f;
 }
 
-/* Return, Edit & Delete Buttons Styling */
-#go_back_button, #comment_editing button {
+/* Assorted Button Styling */
+#go_back_button, #comment_editing button, .top_button, .bottom_button {
     background-color: #f0511c;
     margin: 10px auto;
     text-align: center;
@@ -352,6 +356,10 @@ footer ul {
     border-radius: 15%;
     color: #fafafa;
     font-size: 16px;
+}
+
+#go_back_button:hover, #comment_editing button:hover, .top_button:hover, .bottom_button:hover {
+    background-color: #078b2f;
 }
 
 /* Add and view Reviews styling */
@@ -388,7 +396,7 @@ footer ul {
     font-size: 16px;
 }
 
-#add_review form button:hover, #go_back_button:hover {
+#add_review form button:hover {
     background-color: #078b2f;
 }
 
