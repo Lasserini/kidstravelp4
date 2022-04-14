@@ -452,6 +452,7 @@ footer ul {
 
 #edit_review form button:hover {
     background-color: #078b2f;
+}
 
 /* Media Queries for 600px screen width and up */
 @media only screen and (min-width: 600px) {
