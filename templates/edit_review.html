@@ -2,16 +2,13 @@
 {% load static %}
 
 {% block content %}
-
-    Hallo Ladies
-
     <div id="edit_review">
         {% if review.username == user or user.is_superuser %}
             <h3>Edit Review</h3>
             <p>Posting as: {{ user.username }}</p>
             <form method="post">
-                {{ review_form }}
                 {% csrf_token %}
+                {{ form.as_p }}
                 <button type="submit">Save Changes</button>
             </form>
         {% else %}

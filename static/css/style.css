@@ -416,6 +416,43 @@ footer ul {
     text-transform: none;
 }
 
+/* Edit Review styling */
+#edit_review {
+    color:#252525;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    display: grid;
+}
+
+#edit_review h3 {
+    color:#252525;
+}
+
+#edit_review form {
+    width: 300px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+#edit_review form input {
+    margin: 10px;
+    line-height: 125%;
+}
+
+#edit_review form button {
+    background-color: #f0511c;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 4px;
+    border-radius: 15%;
+    color: #fafafa;
+    font-size: 16px;
+}
+
+#edit_review form button:hover {
+    background-color: #078b2f;
+
 /* Media Queries for 600px screen width and up */
 @media only screen and (min-width: 600px) {
     .topnav {
@@ -464,4 +501,4 @@ footer ul {
         margin: 5px 20%;
         font-size: 18px;
     }
-  }
+}

@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
 from django.views import View
-from .models import Experience
+from .models import Experience, Review
 from .filters import ExperienceFilter
 from .forms import ReviewForm
 
@@ -66,4 +66,16 @@ class ExperienceDetail(View):
 
 
 def edit_review(request, review_id):
-    return render(request, 'edit_review.html')
+    review = get_object_or_404(Review, id=review_id)
+    
+    if request.method == "POST":
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/results")
+    else:
+        form = ReviewForm(instance=review)
+
+    context = {'form': form}
+   
+    return render(request, 'edit_review.html', context)
