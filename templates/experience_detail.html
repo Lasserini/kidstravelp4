@@ -44,6 +44,15 @@
         <h4>By {{ review.username }}</h4>
         <span>{{ review.created_on }}</span>
         <p>{{ review.content }}</p>
+        <!-- Options to edit and delete a review if its yours -->
+        <div id="comment_editing">
+            {% if review.username == user %}
+                <a href="/edit/{{ item.id }}/">
+                    <button>Edit</button>
+                </a>
+                <button type="submit">Delete</button>
+            {% endif %}
+        </div>
   </div>
 {% endfor %}
 

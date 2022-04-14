@@ -337,8 +337,8 @@ footer ul {
     color: #078b2f;
 }
 
-/* Return Button Styling */
-#go_back_button {
+/* Return, Edit & Delete Buttons Styling */
+#go_back_button, #comment_editing button {
     background-color: #f0511c;
     margin: 10px auto;
     text-align: center;
