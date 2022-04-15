@@ -25,10 +25,8 @@
         {% endif %}
         <div id="admin_experience_editing">
             {% if user.is_superuser %}
-                <a href="{% url 'editexp' experience.id %}">
-                    <button >Edit</button>
-                <a href="{% url 'deleteexp' experience.id %}">
-                    <button onmouseover="deleteConfirmTwo()" id="delete_experience">Delete</button>
+                <a href="{% url 'editexp' experience.id %}"><button >Edit</button></a>
+                <a onmouseover="deleteConfirmTwo()" href="{% url 'deleteexp' experience.id %}"><button id="delete_experience">Delete</button></a>
             {% endif %}
     </div>
     
@@ -54,10 +52,8 @@
         <!-- Options to edit and delete a review if its yours -->
         <div id="comment_editing">
             {% if review.username == user or user.is_superuser %}
-                <a href="{% url 'edit' review.id %}">
-                    <button >Edit</button>
-                <a href="{% url 'delete' review.id %}">
-                    <button onmouseover="deleteConfirm()" id="delete_review">Delete</button>
+                <a href="{% url 'edit' review.id %}"><button >Edit</button></a>
+                <a onmouseover="deleteConfirm()" href="{% url 'delete' review.id %}"><button id="delete_review">Delete</button></a>
             {% endif %}
         </div>
   </div>

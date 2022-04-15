@@ -2,10 +2,11 @@
 {% load static %}
 
 {% block content %}
-    <div id="edit_experience">
+    <div id="add_experience">
         {% if user.is_superuser %}
-            <h3>Edit Experience</h3>
-            <form method="post">
+            <h3>Add new Experience</h3>
+            <p>Instructions:</p>
+            <form method="post" action="add">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit">Save Changes</button>
@@ -14,5 +15,6 @@
         {% else %}
             <p>Permission Denied</p>
         {% endif %}
+        <!-- Return to previous page button -->
     </div>
 {%endblock%}

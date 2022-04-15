@@ -12,5 +12,6 @@ urlpatterns = [
     path('delete/<review_id>', views.delete_review, name='delete'),
     path('editexp/<experience_id>', views.edit_experience, name='editexp'),
     path('deleteexp/<experience_id>', views.delete_experience,
-         name='deleteexp')
+         name='deleteexp'),
+    path('add', views.add_experience, name='add')
 ]

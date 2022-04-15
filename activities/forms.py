@@ -11,4 +11,5 @@ class ReviewForm(forms.ModelForm):
 class ExperienceForm(forms.ModelForm):
     class Meta:
         model = Experience
-        fields = ('name', 'slug', 'city', 'category', 'description', 'excerpt', 'price', 'directions', 'website', 'image', )
+        fields = ('name', 'slug', 'city', 'category', 'description', 'excerpt',
+                  'price', 'directions', 'website', 'image', )

@@ -3,6 +3,13 @@
 {% block content %}
 <div id="search_container">
     <h2>Find Experience</h2>
+    <!-- Admin access to adding new experiences -->
+    <div id="add_experience">
+      {% if user.is_superuser %}
+          <a href="{% url 'add' %}" input><button>Add Experience</button></a>
+      {% endif %}
+  </div>
+
     <!-- The form that allows the users to search for experiences -->
     <form method="get", action="." id="search_form">
         {{myFilter.form}}

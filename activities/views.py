@@ -107,3 +107,16 @@ def delete_experience(request, experience_id):
     experience = get_object_or_404(Experience, id=experience_id)
     experience.delete()
     return HttpResponseRedirect("/results")
+
+
+def add_experience(request):
+    if request.method == 'POST':
+        form = ExperienceForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return HttpResponseRedirect("/results")
+    form = ExperienceForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'add_experience.html', context)

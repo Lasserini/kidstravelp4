@@ -16,6 +16,11 @@ body {
     background-color: lightblue;
 }
 
+input, button, a {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+}
+
 h1, h2, h3, h4, h5 {
     font-family: Oswald, sans-serif;
     text-transform: uppercase;
@@ -349,7 +354,7 @@ footer ul {
 }
 
 /* Assorted Button Styling */
-#go_back_button, #comment_editing button, .top_button, .bottom_button {
+#go_back_button, #comment_editing button, .top_button, .bottom_button, #admin_experience_editing button {
     background-color: #f0511c;
     margin: 10px auto;
     text-align: center;
@@ -359,7 +364,7 @@ footer ul {
     font-size: 16px;
 }
 
-#go_back_button:hover, #comment_editing button:hover, .top_button:hover, .bottom_button:hover {
+#go_back_button:hover, #comment_editing button:hover, .top_button:hover, .bottom_button:hover, #admin_experience_editing button:hover {
     background-color: #078b2f;
 }
 
@@ -416,8 +421,8 @@ footer ul {
     text-transform: none;
 }
 
-/* Edit Review styling */
-#edit_review {
+/* Edit Review, Edit Experience & Add Experience styling */
+#edit_review, #edit_experience, #add_experience {
     color:#252525;
     text-align: center;
     padding: 10px;
@@ -425,32 +430,31 @@ footer ul {
     display: grid;
 }
 
-#edit_review h3 {
+#edit_review h3, #edit_experience h3, #add_experience h3 {
     color:#252525;
 }
 
-#edit_review form {
+#edit_review form, #edit_experience form, #add_experience form {
     width: 300px;
     text-align: center;
     margin: 10px auto;
 }
 
-#edit_review form input {
+#edit_review form input, #edit_experience input, #add_experience input {
     margin: 10px;
     line-height: 125%;
 }
 
-#edit_review form button {
+#edit_review form button, #edit_experience button, #add_experience button {
     background-color: #f0511c;
     margin-top: 10px;
-    margin-left: 20px;
     padding: 4px;
     border-radius: 15%;
     color: #fafafa;
     font-size: 16px;
 }
 
-#edit_review form button:hover {
+#edit_review form button:hover, #edit_experience button:hover, #add_experience button:hover {
     background-color: #078b2f;
 }
 
