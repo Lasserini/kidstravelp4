@@ -8,14 +8,14 @@
 ## 1. User Experience (UX)
 
 ### 1.1 Project introduction
-This website is a concept model for a Website that attempts to help parents traveling with their children. It provides search functionality to find
-experiences based on city and category filtering. This demo concept contains prepopulated experiences added for Florence & Copenhagen, whilst a fully
-fletched version of the site would incorporate functionality to allow users to add additional experiences to the database.
+This website is a concept model for a website aimed at helping parents traveling with their children. The site features a variety of activities to do with kids whilst traveling. <br><br>
+This demo concept contains prepopulated experiences added for Florence & Copenhagen, whilst a fully fletched version of the site would incorporate functionality to allow users to add additional experiences to the database.<br>
+It provides search functionality to find experiences based on city and category filtering, enabling users to quickly navigate to relevant content.
 
-Users can search for experiences, write their own review of the experiences and like experiences and reviews.
+Users can search for experiences and write their own review of the experiences, with build-in functionality to edit and delete previously posted reviews.
 
 ### 1.2 Design approach
-The site was build using an agile methodology. The method applied was a Kanban Board.
+The site was build using an agile methodology. The method applied was a Kanban Board. Here's an image of the Kanban board earlier in the process.
 <img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/kanban_board.png">
 
 ### 1.3 Design guidelines
@@ -36,6 +36,8 @@ Simple, intuitive, stick to a few colours & designpatterns throughout the site. 
 - As an owner, I want allow users to create a profile.
 - As a user, I want to find travel activities for my children.
 - As a user, I want to share how an activity was for me.
+- As a user, I want to edit a posted review.
+- As a user, I want to delete a posted review.
 - As a user, I want an search by category.
 - As a user, I want an search by city.
 - As a user, I want an create a user account.
@@ -86,12 +88,14 @@ Simple, intuitive, stick to a few colours & designpatterns throughout the site. 
 *   The experiences page includes:
     - **More indepth description of the chosen experience**
     - **User created reviews**
-    - **Optio for user to submit a review**
+    - **Option for user to submit a review**
+    - **Ability to edit & delete previously posted reviews**
 
 ### 2.2 Futures left to implement 
 - Add stronger delete review & experience protection. Touchscreens needs a better solution.
-- Allow users to add new experiences to the database
-- A user dashboard with overview of their posted items
+- Allow users to add new experiences to the database.
+- A user dashboard with overview of their posted items.
+- Signup/login with Facebook/Google/Etc.
 - Like or up/downvote functionality to experiences and reviews
 - More advanced search options, fx a search function that utilize Map Clustering
 
@@ -131,6 +135,8 @@ Simple, intuitive, stick to a few colours & designpatterns throughout the site. 
     - Used to validate the Python code.
 1. [JSHint](https://jshint.com/)
     - Used to validate the JavaScript code.
+1. [Summernote](https://summernote.org/)
+    - A text editor for the admin panel.
 
 ## 4. Testing
 The testing process can be found [here.](https://github.com/Lasserini/kidstravelp4/blob/main/testing.md)
@@ -139,13 +145,18 @@ The testing process can be found [here.](https://github.com/Lasserini/kidstravel
 
 ### 5.1 GitHub Pages
 
-The project was deployed to Heroku using the following steps...
+The site was deployed to Heroku pages using following steps:
 
-1. Log in to Heroku.
-2. Set correct config_vars
-3. Connect to postgres database.
-4. Connect Heroku to Github Repository.
-5. Deploy site.
+1. Sign up or Login to Heroku
+2. Click on the "new appllication", select App name and choose your region.
+3. Click on "Deploy" and choose your deployment method
+4. If you are connecting with Github choose your main branch and find your repository
+5. Under "ressources" attach "Heroku Postgres" as Database.
+6. Under "settings" -> "reveal config vars": add "CLOUDINARY_URL", "DATABASE_URL" & "SECRET_KEY" with mathing values.
+7. Click on deploy manually or automatically
+8. The project is now beeing deployed
+9. When deployed click on "Open App"
+10. If you click on settings on the main menu bar you will find your Heroku git URL
 
 ### 5.2 Making a Local Clone
 
@@ -161,6 +172,25 @@ $ git clone https://github.com/Lasserini/kidstravelp4
 ```
 
 7. Press Enter. Your local clone will be created.
+8. Remember to create an env.py file, install dependencies and create/update a requirements.txt file.
+9. To install the required packages for this application, type the following: pip3 install -r requirements.txt
+
+asgiref==3.5.0
+cloudinary==1.29.0
+dj-database-url==0.5.0
+dj3-cloudinary-storage==0.0.6
+Django==3.2
+django-allauth==0.50.0
+django-filter==21.1
+django-summernote==0.8.20.0
+gunicorn==20.1.0
+oauthlib==3.2.0
+psycopg2==2.9.3
+PyJWT==2.3.0
+python3-openid==3.2.0
+pytz==2022.1
+requests-oauthlib==1.3.1
+sqlparse==0.4.2
 
 ```
 $ git clone https://github.com/Lasserini/kidstravelp4
