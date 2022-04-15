@@ -16,18 +16,62 @@ The test was succesfull and did not report any issues.<br>
 <img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/css_validation.png">
 
 ### 1.2 HTML Validation
-The large amount of {{% import static %}} etc. is making my validator go bananas. Most of the minor HTML formating errors and rule violations has been fixed.
+### Index Page
+The test was succesfull and did not report any issues.<br>
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/index_html_validation.png">
+
+### Results Page
+- Django adds various table tags to the elements the site pulls from a data model. The validator doesn't like that, I'm unsure of how to fix it though.
+- I've made a concious decision to break the "no button in a tag" rule. The site has significant issues with "overflowing" A-tags, inparticular the delete item tags being out of place was too large of an issue to ignore. Attempted several other fixes before resorting to this method.<br>
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/results_html_validation.png">
+
+### Experience_Detail Page
+- Django adds various table tags to the elements the site pulls from a data model. The validator doesn't like that, I'm unsure of how to fix it though.
+- I've made a concious decision to break the "no button in a tag" rule. The site has significant issues with "overflowing" A-tags, inparticular the delete item tags being out of place was too large of an issue to ignore. Attempted several other fixes before resorting to this method.<br>
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/experiencedetail_html_validation.png">
+
+### Add_Experience Page
+The test was succesfull and did not report any issues.<br>
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/addexperience_html_validation.png">
+
+### Edit Experience Page
+The test was succesfull and did not report any issues.<br>
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/editexperience_html_validation.png">
+
+### Edit Review Page
+The test was succesfull and did not report any issues.<br>
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/editreview_html_validation.png">
+
 
 ### 1.3 JavaScript Validation
-Nothing of concern. I used an onclick function from html, so JSHINT cant see that the function is actually being used from elsewhere.
-<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/jshint.png">
+Nothing of concern. The three "unused" variables are functions that are being called from the html with "onclick" or "onmouseover".<br>
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/javascript_validation.png">
 
 ### 1.4 Python Validation
-Tested the Python files with most of my custom written code. No problems.
-- Models.py:
-<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/models_python_validation.png">
-- Views.py:
-<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/views_python_validation.png">
+### models.py:
+The test was succesfull and did not report any issues.<br>
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/models_validation.png">
+
+### views.py:
+The test was succesfull and did not report any issues.<br>
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/views_validation.png">
+
+### forms.py
+The test was succesfull and did not report any issues.<br>
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/forms_validation.png">
+
+### urls.py
+The test was succesfull and did not report any issues.<br>
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/urls_validation.png">
+
+### filters.py
+The test was succesfull and did not report any issues.<br>
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/filters_validation.png">
+
+### admin.py
+The test was succesfull and did not report any issues.<br>
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/admin_validation.png">
+
 
 ## 2. Responsiveness
 To test responsiveness across various devices & screensizes, I used [Responsive Design Checkcer](https://www.responsivedesignchecker.com/), a 17`` laptop & a OnePlus 6T mobile phone.

@@ -6,12 +6,12 @@
     <!-- Admin access to adding new experiences -->
     <div id="add_experience">
       {% if user.is_superuser %}
-          <a href="{% url 'add' %}" input><button>Add Experience</button></a>
+          <a href="{% url 'add' %}"><button>Add Experience</button></a>
       {% endif %}
   </div>
 
     <!-- The form that allows the users to search for experiences -->
-    <form method="get", action="." id="search_form">
+    <form method="get" action="." id="search_form">
         {{myFilter.form}}
         <br>
         <button type="submit" id="search_btn">Search</button>
@@ -27,7 +27,7 @@
   <div class="search_result_item search_hover_link" onclick='location.href="{% url 'experience_detail' experience.slug  %}";' style="cursor: pointer;">
     <div>
         <h3>{{ experience.name }}</h3>
-        <h4>{{ experience.category }} in {{ experience.city }}<h4>
+        <h4>{{ experience.category }} in {{ experience.city }}</h4>
         <p>{{ experience.excerpt }}</p>
         <a href="{% url 'experience_detail' experience.slug  %}" class="experience-link">Read More</a>
     </div>

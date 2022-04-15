@@ -21,7 +21,7 @@ function deleteConfirm(){
     var deleteButton= document.getElementById("delete_review");
     if (confirm("Confirm Review Deletion")){
         deleteButton.click();
-        alert("Review Deleted!")
+        alert("Review Deleted!");
     }
 }
 
@@ -29,6 +29,6 @@ function deleteConfirmTwo(){
     var deleteButton= document.getElementById("delete_experience");
     if (confirm("Careful! Confirm Experience Deletion??")){
         deleteButton.click();
-        alert("Experience Deleted!")
+        alert("Experience Deleted!");
     }
 }

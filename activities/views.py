@@ -67,7 +67,7 @@ class ExperienceDetail(View):
 
 def edit_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
-    
+
     if request.method == "POST":
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
@@ -77,7 +77,7 @@ def edit_review(request, review_id):
         form = ReviewForm(instance=review)
 
     context = {'form': form}
-   
+
     return render(request, 'edit_review.html', context)
 
 
@@ -89,7 +89,7 @@ def delete_review(request, review_id):
 
 def edit_experience(request, experience_id):
     experience = get_object_or_404(Experience, id=experience_id)
-    
+
     if request.method == "POST":
         form = ExperienceForm(request.POST, instance=experience)
         if form.is_valid():
@@ -99,7 +99,7 @@ def edit_experience(request, experience_id):
         form = ExperienceForm(instance=experience)
 
     context = {'form': form}
-   
+
     return render(request, 'edit_experience.html', context)
 
 
