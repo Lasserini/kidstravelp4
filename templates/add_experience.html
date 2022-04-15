@@ -5,7 +5,12 @@
     <div id="add_experience">
         {% if user.is_superuser %}
             <h3>Add new Experience</h3>
-            <p>Instructions:</p>
+            <p>Instructions:<br>
+                1. Slug-naming convention example:<br>
+                Name = Copenhagen Zoo, Slug = copenhagen-zoo
+                <br>
+                2. The site admin panel is better suited for adding new experiences<br>
+            </p>
             <form method="post" action="add">
                 {% csrf_token %}
                 {{ form.as_p }}
