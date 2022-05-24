@@ -143,7 +143,7 @@ The testing process can be found [here.](https://github.com/Lasserini/kidstravel
 
 ## 5. Deployment
 
-### 5.1 GitHub Pages
+### 5.1 Heroku
 
 The site was deployed to Heroku pages using following steps:
 
