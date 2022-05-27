@@ -83,7 +83,10 @@ def edit_review(request, review_id):
 
 def delete_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
-    review.delete()
+    if request.user.is_superuser:
+        review.delete()
+    elif request.user == review.username:
+        review.delete()
     return HttpResponseRedirect("/results")
 
 
@@ -105,7 +108,8 @@ def edit_experience(request, experience_id):
 
 def delete_experience(request, experience_id):
     experience = get_object_or_404(Experience, id=experience_id)
-    experience.delete()
+    if request.user.is_superuser:
+        experience.delete()
     return HttpResponseRedirect("/results")
 
 
