@@ -371,12 +371,12 @@ footer ul {
     width: 80%;
 }
 
-.close {
+.close, .close2 {
     color:red;
     float: right;
 }
 
-.close:hover, .close:focus {
+.close:hover, .close:focus, .close2:hover, .close2:focus {
   color: #078b2f;
   cursor: pointer;
 }
