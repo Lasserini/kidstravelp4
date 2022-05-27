@@ -350,6 +350,38 @@ footer ul {
     color: #078b2f;
 }
 
+/* Styling for Deletition Confirmation Modals, heavily inspired by https://www.w3schools.com/howto/howto_css_modals.asp */
+.modal, .modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal-content, .modal-content2 {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 5px solid red;
+    max-width: 400px;
+    width: 80%;
+}
+
+.close {
+    color:red;
+    float: right;
+}
+
+.close:hover, .close:focus {
+  color: #078b2f;
+  cursor: pointer;
+}
+
+
 /* Assorted Button Styling */
 #go_back_button, #comment_editing button, .top_button, .bottom_button, #admin_experience_editing button {
     background-color: #f0511c;

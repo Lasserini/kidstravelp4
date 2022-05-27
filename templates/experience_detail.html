@@ -26,7 +26,17 @@
         <div id="admin_experience_editing">
             {% if user.is_superuser %}
                 <a href="{% url 'editexp' experience.id %}"><button >Edit</button></a>
-                <a onmouseover="deleteConfirmTwo()" href="{% url 'deleteexp' experience.id %}"><button id="delete_experience">Delete</button></a>
+                <button id="ExpModalBtn">Delete</button>
+                <!-- Delete confirmation Modal, inspiration from https://www.w3schools.com/howto/howto_css_modals.asp -->
+                <div id="deleteExpModal" class="modal">
+                      <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Confirm that you wish to delete the Experience.<br>
+                                To avoid deletion, close this box on the X or lick anywhere outside it</p>
+                            <a href="{% url 'deleteexp' experience.id %}"><button id="delete_experience">Confirm Deletion</button></a>
+                        </div>
+                </div>
             {% endif %}
         </div>
     </div>
@@ -54,7 +64,17 @@
         <div id="comment_editing">
             {% if review.username == user or user.is_superuser %}
                 <a href="{% url 'edit' review.id %}"><button >Edit</button></a>
-                <a onmouseover="deleteConfirm()" href="{% url 'delete' review.id %}"><button id="delete_review">Delete</button></a>
+                <button id="ReviewModalBtn">Delete</button>
+                <!-- Delete confirmation Modal, inspiration from https://www.w3schools.com/howto/howto_css_modals.asp -->
+                <div id="deleteReviewModal" class="modal2">
+                      <!-- Modal content -->
+                        <div class="modal-content2">
+                            <span class="close">&times;</span>
+                            <p>Confirm that you wish to delete the Review.<br>
+                                To avoid deletion, close this box on the X or lick anywhere outside it</p>
+                            <a href="{% url 'delete' review.id %}"><button id="delete_review">Confirm Deletion</button></a>
+                        </div>
+                </div>
             {% endif %}
         </div>
   </div>
