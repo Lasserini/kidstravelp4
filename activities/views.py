@@ -68,13 +68,14 @@ class ExperienceDetail(View):
 def edit_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
 
-    if request.method == "POST":
-        form = ReviewForm(request.POST, instance=review)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect("/results")
-    else:
-        form = ReviewForm(instance=review)
+    if request.user.is_superuser or request.user == review.username:
+        if request.method == "POST":
+            form = ReviewForm(request.POST, instance=review)
+            if form.is_valid():
+                form.save()
+                return HttpResponseRedirect("/results")
+        else:
+            form = ReviewForm(instance=review)
 
     context = {'form': form}
 
@@ -83,9 +84,7 @@ def edit_review(request, review_id):
 
 def delete_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
-    if request.user.is_superuser:
-        review.delete()
-    elif request.user == review.username:
+    if request.user.is_superuser or request.user == review.username:
         review.delete()
     return HttpResponseRedirect("/results")
 
