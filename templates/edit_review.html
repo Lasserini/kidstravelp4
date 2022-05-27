@@ -6,7 +6,7 @@
         {% if review.username == user or user.is_superuser %}
             <h3>Edit Review</h3>
             <p>Posting as: {{ user.username }}</p>
-            <form method="post">
+            <form action="{% url 'results' %}" method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit">Save Changes</button>
