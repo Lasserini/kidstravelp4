@@ -3,7 +3,6 @@
 
 {% block content %}
     <div id="edit_review">
-        <!-- {% if review.username == user or user.is_superuser %} -->
         <h3>Edit Review</h3>
         <p>Posting as: {{ user.username }}</p>
         <form method="post">
@@ -11,10 +10,6 @@
             {{ form.as_p }}
             <button type="submit">Save Changes</button>
             </form>
-        <!-- {% else %}
-            <p>Permission Denied</p>
-        {% endif %} -->
-        <!-- Return to previous page button -->
         <button id="go_back_button" onclick="history.back()">Go Back</button>
     </div>
 {%endblock%}
