@@ -64,7 +64,7 @@
         <div id="comment_editing">
             {% if review.username == user or user.is_superuser %}
                 <a href="{% url 'edit' review.id %}"><button >Edit</button></a>
-                <button id="ReviewModalBtn">Delete</button>
+                <button id="ReviewModalBtn" class="ReviewModalBtn">Delete</button>
                 <!-- Delete confirmation Modal, inspiration from https://www.w3schools.com/howto/howto_css_modals.asp -->
                 <div id="deleteReviewModal" class="modal2">
                       <!-- Modal content -->

@@ -22,9 +22,9 @@ if (ExpDeleteCheck) {
 // Delete Reviews
 const modal2 = document.getElementById("deleteReviewModal");
 
-let ReviewDeleteCheck = document.querySelector("#ReviewModalBtn");
-if (ReviewDeleteCheck) {
-    ReviewDeleteCheck.onclick = () => {
+let ReviewDeleteCheck = document.querySelectorAll("#ReviewModalBtn");
+for(var i=0; i<ReviewDeleteCheck.length; i++){
+    ReviewDeleteCheck[i].onclick = () => {
         modal2.style.display = "block";
     }
 }
