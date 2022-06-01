@@ -24,7 +24,7 @@ Simple, intuitive, stick to a few colours & designpatterns throughout the site. 
 ### 1.4 Project goals
 - Provide a proof of concept.
 - Add meaningful search mechanisms.
-- Allow users to post reviews of the added experiences.
+- Allow users to post, edit and delete reviews of the added experiences.
 
 ### 1.5 Target audience
 - Parents traveling with children.
@@ -92,12 +92,11 @@ Simple, intuitive, stick to a few colours & designpatterns throughout the site. 
     - **Ability to edit & delete previously posted reviews**
 
 ### 2.2 Futures left to implement 
-- Add stronger delete review & experience protection. Touchscreens needs a better solution.
 - Allow users to add new experiences to the database.
 - A user dashboard with overview of their posted items.
 - Signup/login with Facebook/Google/Etc.
-- Like or up/downvote functionality to experiences and reviews
-- More advanced search options, fx a search function that utilize Map Clustering
+- Like or up/downvote functionality to experiences and reviews.
+- More advanced search options, fx a search function that utilize Map Clustering.
 
 ## 3. Technologies Used
 
@@ -218,4 +217,4 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 - My Mentor for continuous helpful feedback.
 
-- Code Institute for providing me with the know-how of basic HTML & CSS necessary to complete this course.
+- Code Institute tutors for providing valuable debugging assistance.

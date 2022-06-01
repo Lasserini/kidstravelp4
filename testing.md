@@ -22,12 +22,12 @@ The test was succesfull and did not report any issues.<br>
 
 ### Results Page
 - Django adds various table tags to the elements the site pulls from a data model. The validator doesn't like that, I'm unsure of how to fix it though.
-- I've made a concious decision to break the "no button in a tag" rule. The site has significant issues with "overflowing" A-tags, inparticular the delete item tags being out of place was too large of an issue to ignore. Attempted several other fixes before resorting to this method.<br>
+- I've made a concious decision to break the "no button in A tag" rule. The site has significant issues with "overflowing" A-tags, inparticular the delete item tags being out of place was too large of an issue to ignore. Attempted several other fixes before resorting to this method.<br>
 <img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/results_html_validation.png">
 
 ### Experience_Detail Page
 - Django adds various table tags to the elements the site pulls from a data model. The validator doesn't like that, I'm unsure of how to fix it though.
-- I've made a concious decision to break the "no button in a tag" rule. The site has significant issues with "overflowing" A-tags, inparticular the delete item tags being out of place was too large of an issue to ignore. Attempted several other fixes before resorting to this method.<br>
+- I've made a concious decision to break the "no button in A tag" rule. The site has significant issues with "overflowing" A-tags, inparticular the delete item tags being out of place was too large of an issue to ignore. Attempted several other fixes before resorting to this method.<br>
 <img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/experiencedetail_html_validation.png">
 
 ### Add_Experience Page
@@ -44,8 +44,13 @@ The test was succesfull and did not report any issues.<br>
 
 
 ### 1.3 JavaScript Validation
-Nothing of concern. The three "unused" variables are functions that are being called from the html with "onclick" or "onmouseover".<br>
-<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/javascript_validation.png">
+### script.js validation
+Nothing of concern. The "unused" variable is being called from the html with "onclick"<br>
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/scriptJS_validation.png">
+
+### scroll.js validation
+The test was succesfull and did not report any issues.<br>
+<img src="https://github.com/Lasserini/kidstravelp4/blob/main/media/validation/scrollJS_validation.png">
 
 ### 1.4 Python Validation
 ### models.py:
